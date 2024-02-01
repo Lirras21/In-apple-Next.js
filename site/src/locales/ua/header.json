@@ -1,0 +1,20 @@
+{
+  "header": {
+    "info": {
+      "delivery": "Доставка і оплата",
+      "guarantee": "Гарантія і сервіс",
+      "listCities": "Список міст",
+      "mail": "in-apple@gmail.com",
+      "number": "0 800 30 777 5"
+    },
+    "navbar": {
+      "mac": "Mac",
+      "iPad": "iPad",
+      "iPhone": "iPhone",
+      "watch": "Apple Watch",
+      "accessories": "Аксесуари",
+      "service": "Сервіс"
+    },
+    "search": "Пошук товарів..."
+  }
+}

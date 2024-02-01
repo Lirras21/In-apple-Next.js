@@ -1,0 +1,49 @@
+{ 
+  "title": {
+    "Mac": "Mac",
+    "iPhone": "iPhone",
+    "iPad": "iPad",
+    "appleWatch": "Apple Watch",
+    "accessories": "Аксесуари",
+    "service": "Сервіс"
+  },
+  "mac" : {
+    "macBookAir": "MacBook Air",
+    "macBookAir13": "MacBook Air 13-in.",
+    "macBookAir15": "MacBook Air 15-in.",
+    "macBookPro14": "MacBook Pro 14-in.",
+    "macBookPro16": "MacBook Pro 16-in."
+  },
+  "iPhone": {
+    "iPhone-7": "iPhone 7",
+    "iPhone-7plus": "iPhone 7 Plus",
+    "iPhone-8": "iPhone 8",
+    "iPhone-8plus": "iPhone 8 Plus",
+    "iPhone-X": "iPhone X",
+    "iPhone-XR": "iPhone XR",
+    "iPhone-XS": "iPhone XS",
+    "iPhone-XSmax": "iPhone XS Max",
+    "iPhone-11": "iPhone 11",
+    "iPhone-11pro": "iPhone 11 Pro",
+    "iPhone-11proMax": "iPhone 11 Pro Max"
+  },
+  "iPad": {
+    "iPad-10.2": "iPad 10.2",
+    "iPad-Pro12.9": "iPad Pro 12.9",
+    "iPad-Pro11": "iPad Pro 11",
+    "iPad-Air2019": "iPad Air 2019",
+    "iPad-Mini": "iPad mini"
+  },
+  "appleWatch": {
+    "Watch-3": "Watch Series 3",
+    "Watch-5": "Watch Series 5",
+    "Watch-SE": "Apple Watch SE",
+    "Watch-6": "Watch Series 6"
+  },
+  "accessories": {
+    "active": "Airpods"
+  },
+  "service": {
+    "active": "Гарантія"
+  }
+}
