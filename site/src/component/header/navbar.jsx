@@ -41,12 +41,12 @@ function Navbar() {
   const itemsInBasket = 2;
 
   const items = [
-    { icon: "/icon/mac.svg", label: t.title.Mac, list: Object.values(t.mac) },
-    { icon: "/icon/ipad.svg", label: t.title.iPad, list: Object.values(t.iPad) },
-    { icon: "/icon/iphone.svg", label: t.title.iPhone, list: Object.values(t.iPhone) },
-    { icon: "/icon/apple-watch.svg", label: t.title.appleWatch, list: Object.values(t.appleWatch) },
-    { icon: "/icon/accessories.svg", label: t.title.accessories, list: Object.values(t.accessories) },
-    { icon: "/icon/service.svg", label: t.title.service, list: Object.values(t.service) },
+    { icon: "/icon/mac.svg", label: t.title.Mac, list: Object.values(t.mac), links: '#' },
+    { icon: "/icon/ipad.svg", label: t.title.iPad, list: Object.values(t.iPad), links: '#' },
+    { icon: "/icon/iphone.svg", label: t.title.iPhone, list: Object.values(t.iPhone), links: '#' },
+    { icon: "/icon/apple-watch.svg", label: t.title.appleWatch, list: Object.values(t.appleWatch), links: '#' },
+    { icon: "/icon/accessories.svg", label: t.title.accessories, list: Object.values(t.accessories), links: '#' },
+    { icon: "/icon/service.svg", label: t.title.service, list: Object.values(t.service), links: t.serviceLink },
   ];
 
   return (
@@ -74,7 +74,7 @@ function Navbar() {
                   <ul className='mt-4 mb-4'>
                     {item.list.map((el, i) => (
                       <li key={i} className='h-7 ml-4 z-50'>
-                        <Link href="#" className='relative after:bg-black after:absolute after:h-[1px] after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer'>{el}</Link>
+                        <Link href={item.links} className='relative after:bg-black after:absolute after:h-[1px] after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer'>{el}</Link>
                       </li>
                     ))}
                   </ul>

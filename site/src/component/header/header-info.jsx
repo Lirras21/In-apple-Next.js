@@ -11,20 +11,20 @@ function HeaderInfo() {
           <nav>
             <ul>
               <li className='flex gap-[20px]'>
-                <Link href='' className={styleLink}>{t.header.info.delivery}</Link>
-                <Link href='' className={styleLink}>{t.header.info.guarantee}</Link>
-                <Link href='' className={styleLink}>{t.header.info.listCities}</Link>
+                <Link href='/delivery' className={styleLink}>{t.header.info.delivery}</Link>
+                <Link href='/guarantee' className={styleLink}>{t.header.info.guarantee}</Link>
+                <Link href='/city-list' className={styleLink}>{t.header.info.listCities}</Link>
               </li>
             </ul>
           </nav>
           <nav>
             <ul>
               <li className='flex gap-[20px]'>
-                <Link href='' className={styleLink}>{t.header.info.mail}</Link>
+                <Link href={`mailto:${t.header.info.mail}`}  className={styleLink}>{t.header.info.mail}</Link>
                 <span className=' text-white cursor-default'>•</span>
-                <Link href='' className={styleLink}>{t.header.info.number}</Link>
+                <Link href={`tel:${t.header.info.number}`} className={styleLink}>{t.header.info.number}</Link>
                 <span className=' text-white cursor-default'>•</span>
-                <Link href='' className={styleLink}>{t.header.info.number}</Link>
+                <Link href={`tel:${t.header.info.number}`}  className={styleLink}>{t.header.info.number}</Link>
               </li>
             </ul>
           </nav>

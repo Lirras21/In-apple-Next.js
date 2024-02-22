@@ -13,7 +13,7 @@ const items = [
 
 function Footer() {
   return (
-    <div className='flex justify-center bottom-0 bg-black mt-[205px] h-[505px]'>
+    <div className='flex bottom-0  justify-center  bg-black h-[505px]'>
       <div className='ml-5 mr-5 pt-8  w-[1108px] flex flex-col md:flex-row justify-center gap-24 max-md:gap-12 max-md:text-center  text-white'>
         {items.map((item, index) => (
           <div key={index} className=''>
