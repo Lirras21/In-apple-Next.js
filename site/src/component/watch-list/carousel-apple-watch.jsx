@@ -1,14 +1,16 @@
 "use client"
 import React, { useEffect, useState } from 'react'
-import { watchList } from './list'
+import { watchList } from '@/helper/items-list'
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { useMediaQuery } from 'react-responsive';
-
+import { useBasket } from '@/helper/add-item-in-basket';
 
 function CarouselWatches() {
   const [startIndex, setStartIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(true);
   const [itemsPerPage, setItemsPerPage] = useState(4);
+  const {addItemToBasket} = useBasket();
+  
   const handlePrevClick = () => {
     setStartIndex((prevStartIndex) => (prevStartIndex - 1 + watchList.length) % watchList.length);
   };
@@ -32,8 +34,8 @@ function CarouselWatches() {
 
 
   return (
-    <div className='flex justify-center mt-5'>
-      <div className='flex justify-center items-center gap-3 bg-white w-[75%] h-[570px]'>
+    <div className='flex justify-center mt-5++'>
+      <div className='flex justify-center items-center  bg-white  w-[1108px] h-[570px]'>
         <div>
           <IoIosArrowBack  onClick={handlePrevClick} className='text-[25px] cursor-pointer'/>
         </div>
@@ -59,17 +61,17 @@ function CarouselWatches() {
               </div>
               <div className='flex flex-col gap-1 items-center mt-5'>
                 <p className='text-sm'>{item.price}</p>
-                <div className='font-bold bg-gray-200 px-4 py-3'>{item.cost}</div>
+                <div className='font-bold bg-gray-200 px-4 py-3'>{item.cost} ₴</div>
               </div>
               {isHovered &&
                 <div className='mt-10 flex h-[65px] text-white gap-[1px] opacity-0 group-hover:opacity-100  transition duration-1000'>
-                  <div className='flex items-center justify-center w-2/3 bg-black gap-1 hover:invert transition duration-500'>
+                  <button className='flex items-center justify-center w-2/3 bg-black gap-1 hover:invert transition duration-500' onClick={() => addItemToBasket(item)}>
                     <img src="/icon/basket.svg" alt="basket" className='h-[25px] invert' />
                     <span>Купити</span>
-                  </div>
-                  <div className='flex text-sm text-center justify-center items-center w-1/3 bg-black hover:invert transition duration-500'>
+                  </button>
+                  <button className='flex text-sm text-center justify-center items-center w-1/3 bg-black hover:invert transition duration-500'>
                     <span>Швидка купівля</span>
-                  </div>
+                  </button>
                 </div>
               }
             </div>
