@@ -4,9 +4,7 @@ export const content = [
 ];
 export const theme = {
   extend: {
-    borderWidth: {
-      'none': '0',
-    },
+    
   },
 };
 export const plugins = [];

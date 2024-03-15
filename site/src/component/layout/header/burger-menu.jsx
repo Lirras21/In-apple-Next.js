@@ -3,7 +3,7 @@ import t from '@/locales/ua/apple-models.json';
 import Link from 'next/link';
 
 
-function BurgerMenu() {
+function BurgerMenu({isOpenBurgerMenu, setIsOpenBurgerMenu}) {
   const [activeIndex, setActiveIndex] = useState(null);
   const handleChangeIndex = (index) => {
     activeIndex === index ? setActiveIndex(null) : setActiveIndex(index)
@@ -17,7 +17,7 @@ function BurgerMenu() {
     { icon: "/icon/service.svg", height: '30px', label: t.title.service, list: Object.values(t.service) },
   ];
   return (
-    <div className='lg:hidden absolute w-full h-full bg-white'>
+    <div className={`${isOpenBurgerMenu ? 'lg:hidden fixed translate-y-0 duration-1000 w-full h-full bg-white z-10' : 'lg:hidden fixed  translate-y-full duration-1000 w-full h-full bg-white'}`}>
       {items.map((item, index) => (
         <div className='' key={index} onClick={() => handleChangeIndex(index)}>
           <div className={`flex items-center  justify-center h-[67px] border-[1px] border-b-gray-300 border-solid ${activeIndex === index ? 'bg-gray-200' : 'bg-white'}`}>

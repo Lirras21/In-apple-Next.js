@@ -5,10 +5,13 @@ import Search from '@/modules/search';
 import Burger from '@/modules/burger';
 import t from '@/locales/ua/apple-models.json';
 import Link from 'next/link';
+import ShopCart from './shop-cart';
+import ShopCartButton from '@/modules/shop-cart-button';
 
 function Navbar() {
   const [activeIndex, setActiveIndex] = useState(null);
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpenBurgerMenu, setIsOpenBurgerMenu] = useState(false);
+  const [isOpenShopCart, setIsOpenShopCart] = useState(false);
   const [openSearch, setOpenSearch] = useState(false);
 
   const commonGridClasses = 'grid place-items-center hover:bg-slate-100 cursor-pointer h-[100px] w-1/6 relative';
@@ -38,15 +41,15 @@ function Navbar() {
 
   }, [activeIndex]);
 
-  const itemsInBasket = 2;
+
 
   const items = [
-    { icon: "/icon/mac.svg", label: t.title.Mac, list: Object.values(t.mac), links: '#' },
-    { icon: "/icon/ipad.svg", label: t.title.iPad, list: Object.values(t.iPad), links: '#' },
-    { icon: "/icon/iphone.svg", label: t.title.iPhone, list: Object.values(t.iPhone), links: '#' },
-    { icon: "/icon/apple-watch.svg", label: t.title.appleWatch, list: Object.values(t.appleWatch), links: '#' },
-    { icon: "/icon/accessories.svg", label: t.title.accessories, list: Object.values(t.accessories), links: '#' },
-    { icon: "/icon/service.svg", label: t.title.service, list: Object.values(t.service), links: t.serviceLink },
+    { icon: "/icon/mac.svg", label: t.title.Mac, list: Object.values(t.mac)},
+    { icon: "/icon/ipad.svg", label: t.title.iPad, list: Object.values(t.iPad)},
+    { icon: "/icon/iphone.svg", label: t.title.iPhone, list: Object.values(t.iPhone)},
+    { icon: "/icon/apple-watch.svg", label: t.title.appleWatch, list: Object.values(t.appleWatch)},
+    { icon: "/icon/accessories.svg", label: t.title.accessories, list: Object.values(t.accessories)},
+    { icon: "/icon/service.svg", label: t.title.service, list: Object.values(t.service)},
   ];
 
   return (
@@ -74,7 +77,7 @@ function Navbar() {
                   <ul className='mt-4 mb-4'>
                     {item.list.map((el, i) => (
                       <li key={i} className='h-7 ml-4 z-50'>
-                        <Link href={item.links} className='relative after:bg-black after:absolute after:h-[1px] after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer'>{el}</Link>
+                        <Link href={`/product-category${el[1]}`} className='relative after:bg-black after:absolute after:h-[1px] after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer'>{el[0]}</Link>
                       </li>
                     ))}
                   </ul>
@@ -91,23 +94,18 @@ function Navbar() {
                 onClick={() => handleOpenSearch()}
               />
             </div>
-            <div className='relative'>
-              <img src="/icon/basket.svg" alt="basket" className='h-[25px]' />
-              {itemsInBasket > 0 && (
-                <div className='absolute top-[-17px] right-[-17px] text-black rounded-full px-2 py-1 text-lg'>
-                  {itemsInBasket}
-                </div>
-              )}
-            </div>
-            <Burger isOpen={isOpen} setIsOpen={setIsOpen}/>
+            <ShopCartButton isOpenShopCart={isOpenShopCart} setIsOpenShopCart={setIsOpenShopCart} />
+            <Burger isOpenBurgerMenu={isOpenBurgerMenu} setIsOpenBurgerMenu={setIsOpenBurgerMenu} />
           </div>
         </div>
         {
-        openSearch &&
-        <Search handleOpenSearch={handleOpenSearch}/>
+          openSearch &&
+          <Search handleOpenSearch={handleOpenSearch} />
         }
       </div>
-      {isOpen && <BurgerMenu />}
+      <BurgerMenu isOpenBurgerMenu={isOpenBurgerMenu} setIsOpenBurgerMenu={setIsOpenBurgerMenu} />
+      <ShopCart isOpenShopCart={isOpenShopCart} setIsOpenShopCart={setIsOpenShopCart} />
+
     </div>
   )
 }

@@ -4,7 +4,7 @@ import { items } from './items'
 
 function News() {
   return (
-    <div className='m-auto flex justify-center pb-32  mt-6 w-[75%] border-t'>
+    <div className='m-auto flex justify-center pb-32  mt-6 w-[75%] lg:w-[1108px] border-t'>
       <div className='mt-10'>
         <div className='text-[23px] text-center font-bold'>
           Новини

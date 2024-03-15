@@ -5,7 +5,7 @@ import CarouselWatches from "@/component/watch-list/carousel-apple-watch";
 
 function Home() {
   return (
-    <div className=" m-auto">
+    <div className="m-auto">
       <Slider />
       <CarouselWatches />
       <CarouselPhones />
