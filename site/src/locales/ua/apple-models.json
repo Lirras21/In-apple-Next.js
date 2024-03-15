@@ -8,43 +8,42 @@
     "service": "Сервіс"
   },
   "mac" : {
-    "macBookAir": "MacBook Air",
-    "macBookAir13": "MacBook Air 13-in.",
-    "macBookAir15": "MacBook Air 15-in.",
-    "macBookPro14": "MacBook Pro 14-in.",
-    "macBookPro16": "MacBook Pro 16-in."
+    "macBookAir": ["MacBook Air", "mac-book-air"],
+    "macBookAir13": ["MacBook Air 13-in.", "mac-book-air-13-in"],
+    "macBookAir15": ["MacBook Air 15-in.", "mac-book-air-15-in"],
+    "macBookPro14": ["MacBook Pro 14-in.", "mac-book-pro-14-in"],
+    "macBookPro16": ["MacBook Pro 16-in.", "mac-book-pro-16-in"]
   },
   "iPhone": {
-    "iPhone-7": "iPhone 7",
-    "iPhone-7plus": "iPhone 7 Plus",
-    "iPhone-8": "iPhone 8",
-    "iPhone-8plus": "iPhone 8 Plus",
-    "iPhone-X": "iPhone X",
-    "iPhone-XR": "iPhone XR",
-    "iPhone-XS": "iPhone XS",
-    "iPhone-XSmax": "iPhone XS Max",
-    "iPhone-11": "iPhone 11",
-    "iPhone-11pro": "iPhone 11 Pro",
-    "iPhone-11proMax": "iPhone 11 Pro Max"
+    "iPhone-7": ["iPhone 7", "iphone-7"],
+    "iPhone-7plus": ["iPhone 7 Plus", "iphone-7-plus"],
+    "iPhone-8": ["iPhone 8", "iphone-8"],
+    "iPhone-8plus": ["iPhone 8 Plus", "iphone-8-plus"],
+    "iPhone-X": ["iPhone X", "iphone-x"],
+    "iPhone-XR": ["iPhone XR", "iphone-xr"],
+    "iPhone-XS": ["iPhone XS", "iphone-xs"],
+    "iPhone-XSmax": ["iPhone XS Max", "iphone-xs-max"],
+    "iPhone-11": ["iPhone 11", "iphone-11"],
+    "iPhone-11pro": ["iPhone 11 Pro", "iphone-11-pro"],
+    "iPhone-11proMax": ["iPhone 11 Pro Max", "iphone-11-pro-max"]
   },
   "iPad": {
-    "iPad-10.2": "iPad 10.2",
-    "iPad-Pro12.9": "iPad Pro 12.9",
-    "iPad-Pro11": "iPad Pro 11",
-    "iPad-Air2019": "iPad Air 2019",
-    "iPad-Mini": "iPad mini"
+    "iPad-10.2": ["iPad 10.2", "apple-ipad-10-2"],
+    "iPad-Pro12.9": ["iPad Pro 12.9", "apple-ipad-pro-12-9"],
+    "iPad-Pro11": ["iPad Pro 11", "apple-ipad-pro-11"],
+    "iPad-Air2019": ["iPad Air 2019", "apple-ipad-air-2019"],
+    "iPad-Mini": ["iPad mini", "apple-ipad-mini"]
   },
   "appleWatch": {
-    "Watch-3": "Watch Series 3",
-    "Watch-5": "Watch Series 5",
-    "Watch-SE": "Apple Watch SE",
-    "Watch-6": "Watch Series 6"
+    "Watch-3": ["Watch Series 3", "apple-watch-series-3"],
+    "Watch-5": ["Watch Series 5", "apple-watch-series-3"],
+    "Watch-SE": ["Apple Watch SE", "apple-watch-se"],
+    "Watch-6": ["Watch Series 6", "apple-watch-series-6"]
   },
   "accessories": {
-    "active": "Airpods"
+    "active": ["Airpods", "airpods"]
   },
   "service": {
-    "active": "Гарантія"
-  },
-  "serviceLink": "/guarantee"
+    "active": ["Гарантія", "guarantee"]
+  }
 }

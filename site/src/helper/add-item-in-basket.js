@@ -5,10 +5,10 @@ export const useBasket = () => {
   let initialBasketItems = [];
   const localStorageKey = 'basketItems';
 
-  const storedBasketItems = localStorage.getItem(localStorageKey);
-  if (storedBasketItems) {
-    initialBasketItems = JSON.parse(storedBasketItems);
-  }
+  // const storedBasketItems = localStorage.getItem(localStorageKey);
+  // if (storedBasketItems) {
+  //   initialBasketItems = JSON.parse(storedBasketItems);
+  // }
 
   const [items, setItems] = useState(initialBasketItems);
 
@@ -20,7 +20,6 @@ export const useBasket = () => {
 
   const addItemToBasket = (item) => {
     setItems((prevItems) => [...prevItems, item]);
-    console.log(items);
   };
   const itemCounts = {};
 

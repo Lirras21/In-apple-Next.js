@@ -1,0 +1,8 @@
+{
+  "iphone-11-pro-max": [
+    {"src": "/iphone/iphone-11-pro-gold.jpg", "description": "iPhone 11 Pro 256GB Dual SIM Gold", "price": "Ціна:", "cost": 33999},
+    {"src": "/iphone/iphone-11-pro-silver.jpg", "description": "iPhone 11 Pro 256GB Dual SIM Silver", "price": "Ціна:", "cost": 33999},
+    {"src": "/iphone/iphone-11-pro-space-gray.jpg", "description": "iPhone 11 Pro 256GB Dual SIM Space Gray", "price": "Ціна:", "cost": 33999},
+    {"src": "/iphone/iphone-11-pro-midnight-green.jpg", "description": "iPhone 11 Pro 256GB Dual SIM Midnight Green", "price": "Ціна:", "cost": 33999}
+  ]
+}

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const OrderForm = ({ showModal, setShowModal, items }) => {
+const OrderForm = ({ showModal, setShowModal, items, width }) => {
   const [firstName, setFirstName] = useState('');
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
@@ -39,8 +39,8 @@ const OrderForm = ({ showModal, setShowModal, items }) => {
   console.log(customersOrders)
 
   return (
-    <div className='flex flex-col gap-6 items-center'>
-      <div className='w-5/6 flex flex-col gap-6 my-5'>
+    <div className='flex w-full flex-col gap-6 items-center'>
+      <div className={`${width} flex flex-col gap-6 my-3`}>
         {forms.map((form) => (
           <div key={form.placeholder} className={`h-14 border-2 border-gray-300 ${form.error && 'border-red-500'}`}>
             <input
@@ -58,7 +58,7 @@ const OrderForm = ({ showModal, setShowModal, items }) => {
       </div>
 
       <button
-        className='mb-10 text-center w-5/6 h-14 text-white bg-black hover:invert hover:border-2 duration-500'
+        className={`mb-10 text-center ${width} h-14 text-white bg-black hover:invert hover:border-2 duration-500`}
         onClick={handleButtonClick}
       >
         ОФОРМИТИ ЗАМОВЛЕННЯ

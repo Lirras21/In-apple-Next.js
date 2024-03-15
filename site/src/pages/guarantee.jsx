@@ -5,7 +5,7 @@ import { IoIosCheckmark } from "react-icons/io";
 import { HiOutlineComputerDesktop } from "react-icons/hi2";
 import { TbDeviceAirpodsCase } from "react-icons/tb";
 
-function Contacts() {
+function Guarantee() {
   return (
     <div className='flex justify-center bg-gray-100 '>
       <div className='w-[75%] '>
@@ -265,4 +265,4 @@ function Contacts() {
   )
 }
 
-export default Contacts
+export default Guarantee;

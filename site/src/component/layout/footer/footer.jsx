@@ -13,8 +13,8 @@ const items = [
 
 function Footer() {
   return (
-    <div className='flex bottom-0  justify-center  bg-black h-[505px]'>
-      <div className='ml-5 mr-5 pt-8  w-[1108px] flex flex-col md:flex-row justify-center gap-24 max-md:gap-12 max-md:text-center  text-white'>
+    <div className='flex mb-0 relative justify-center  bg-black h-[505px]'>
+      <div className='pt-8  w-[1108px] flex flex-col md:flex-row justify-center gap-24 max-md:gap-12 max-md:text-center  text-white'>
         {items.map((item, index) => (
           <div key={index} className=''>
             <Link href='#' className='text-gray-500'>
@@ -23,7 +23,7 @@ function Footer() {
             <ul className='mt-5 max-md:hidden'>
               {item.models.map((el, i) => (
                 <li key={i} className='mt-[10px] text-sm'>
-                  <Link href="#" className='relative after:bg-white after:absolute after:h-[1px] after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer'>{el}</Link>
+                  <a href={`/product-category${el[1]}`} className='relative after:bg-white after:absolute after:h-[1px] after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer'>{el[0]}</a>
                 </li>
               ))}
             </ul>
@@ -34,4 +34,4 @@ function Footer() {
   )
 }
 
-export default Footer
+export default Footer;

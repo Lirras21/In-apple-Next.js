@@ -38,7 +38,7 @@ function Checkout() {
 
   return (
     <div className='flex flex-col mb-10 items-center'>
-      <div className='md:w-[1108px] w-[75%]'>
+      <div className='md:w-[1108px] w-[85%]'>
         <div className='flex gap-4 text-sm mt-6 '>
           <Link href='/'>Головна</Link>
           <span className='text-black cursor-default'>•</span>
@@ -46,11 +46,11 @@ function Checkout() {
         </div>
         <div className='text-center mt-16'>
           <div className=' mt-12 text-[23px] font-bold '>
-            Моя корзина: {getBasketItemsLength()} товари на ₴{totalCost}
+            Моя корзина: {getBasketItemsLength()} товари на ₴{totalCost.toLocaleString()}
           </div>
           <div className=' mt-12  bg-white lg:flex pb-10 border-b'>
             <div className=' lg:w-1/2 my-6 flex justify-center'>
-              <div className='w-4/6'>
+              <div className='md:w-4/6'>
                 <div>
                   {Object.keys(itemCounts).map((itemId) => {
                     const item = items.find((item) => item.description === itemId);
@@ -68,7 +68,7 @@ function Checkout() {
                               <div className='flex justify-center w-1/3 text-sm  items-center'>{itemCounts[itemId]}</div>
                               <button className='flex justify-center w-1/3 hover:text-white hover:bg-black duration-500 items-center' onClick={() => addItemToBasket(item)}>+</button>
                             </div>
-                            <p className='text-start text-lg'>₴{item.cost}</p>
+                            <p className='text-start text-lg'>₴{item.cost.toLocaleString()}</p>
                           </div>
                         </div>
                         <button className='hover:rotate-90 duration-500' onClick={() => removeAllItemsFromBasket(item.description)}>
@@ -82,7 +82,7 @@ function Checkout() {
                   })}
                 </div>
                 <div className='text-start  text-[23px] font-bold mt-9'>
-                  Всього на ₴{totalCost}
+                  Всього на ₴{totalCost.toLocaleString()}
                 </div>
               </div>
             </div>
@@ -91,7 +91,7 @@ function Checkout() {
                 <div className='text-[23px]'>
                   Залиште дані <br /> і ми зв’яжемося з Вами
                 </div>
-                <OrderForm  showModal={showModal} setShowModal={setShowModal} items={items} />
+                <OrderForm  showModal={showModal} setShowModal={setShowModal} items={items} width='w-5/6'/>
                 {showModal && (
                   <div className='fixed inset-0 flex items-center justify-center z-50'>
                     <div className='fixed inset-0 bg-black opacity-50'></div>

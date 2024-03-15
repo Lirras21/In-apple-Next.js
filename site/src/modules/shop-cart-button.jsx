@@ -1,27 +1,12 @@
 import { useState, useEffect } from 'react';
 import { useBasket } from '@/helper/add-item-in-basket';
+import { usePathname } from 'next/navigation';
 
 const ShopCartButton = ({ isOpenShopCart, setIsOpenShopCart }) => {
+  const pathname = usePathname();
   const { getBasketItemsLength } = useBasket();
-
-  const [currentPath, setCurrentPath] = useState('');
-
-  useEffect(() => {
-    const updatePath = () => {
-      setCurrentPath(window.location.pathname);
-    };
-
-    updatePath();
-    console.log(currentPath)
-    window.addEventListener('popstate', updatePath);
-    window.addEventListener('hashchange', updatePath);
-    return () => {
-      window.removeEventListener('popstate', updatePath);
-    };
-  }, [currentPath]); 
-
-  console.log(currentPath)
-  if(currentPath === '/checkout') {
+  
+  if(pathname === '/checkout') {
     return null
   }
   

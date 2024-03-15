@@ -23,7 +23,7 @@ function ShopCart({ isOpenShopCart, setIsOpenShopCart }) {
 
   return (
     <div
-      className={`${isOpenShopCart && items.length >= 0 ? 'bg-white lg:w-[30%] md:w-2/3 w-full h-full fixed right-0 top-0 translate-x-0 transition duration-1000' : 'bg-white lg:w-[30%] md:w-2/3 w-full h-full fixed right-0 top-0 translate-x-full transition duration-1000'} `}
+      className={`${isOpenShopCart && items.length >= 0 ? 'bg-white lg:w-[30%] md:w-2/3 w-full h-full fixed right-0 top-0 translate-x-0 transition duration-1000 z-10' : 'bg-white lg:w-[30%] md:w-2/3 w-full h-full fixed opacity-0 right-0 top-0 translate-x-full transition duration-1000'} `}
     >
       <div>
         <div className='bg-black text-white text-lg flex justify-between items-center font-bold px-4 h-14'>
